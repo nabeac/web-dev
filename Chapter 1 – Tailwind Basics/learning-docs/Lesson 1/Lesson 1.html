@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+  <title>داکیومنت قابل استفاده مجدد</title>
+</head>
+
+<body class="bg-gray-100 p-6  text-gray-800 leading-relaxed">
+
+  <div class="max-w-3xl mx-auto space-y-6">
+
+    <!-- Header Component -->
+    <header class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+      <h1 class="text-3xl font-bold text-orange-600">جلسه اول : tailwin css چیست؟</h1>
+      <p class="text-gray-600 mt-1">شروع یادگیری فرانت مودرن!</p>
+    </header>
+
+
+
+
+
+
+    <!-- Code Block Component -->
+    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+      <!-- Explanation -->
+      <p class="mt-3 text-gray-700 leading-relaxed">
+        Tailwind CSS یک فریم‌ورک Utility-first است که به جای نوشتن استایل‌های جداگانه، به تو کلاس‌های کوچک و آماده
+        می‌دهد تا ظاهر عناصر را مستقیماً داخل HTML بسازی. با Tailwind می‌توانی بدون نوشتن حتی یک خط CSS، خیلی سریع رابط
+        کاربری‌های تمیز، ریسپانسیو و قابل‌سفارشی‌سازی بسازی و همه‌چیز را دقیقاً هم‌زمان با کدنویسی طراحی کنی.
+      </p>
+    </section>
+
+    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+      <h2 class="text-xl font-bold text-orange-600 mb-3">Install Tailwind CSS (v3.4) </h2>
+
+
+      <!-- Explanation -->
+      <p class="mt-3 text-gray-700 leading-relaxed">
+        در مرحله اول توجه داشته باشید که حتما node.js در سیستم شما نصب شده باشد.
+
+        برای نصب Tailwind CSS در یک پروژه جدید، مراحل زیر را انجام دهید:
+
+      </p>
+    </section>
+
+    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+
+      <p class="mt-3 text-gray-700 leading-relaxed">
+
+
+        1. ایجاد پروژه و نصب پکیج‌ها
+
+        Tailwind را به همراه PostCSS و Autoprefixer نصب کنید:
+      </p>
+
+      <!-- Code box -->
+      <pre class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>// نصب تیلویند (کامند)
+        npm install -D tailwindcss@3
+      </code></pre>
+      <p class="mt-3 text-gray-700 leading-relaxed">
+        سپس فایل‌های پیکربندی را ایجاد کنید:
+      </p>
+      <pre class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>//  پیکربندی (کامند)
+        npx tailwindcss init
+      </code></pre>
+    </section>
+
+    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+
+      <p class="mt-3 text-gray-700 leading-relaxed">
+
+
+        2. تنظیم مسیرهای Template
+
+        فایل tailwind.config.js را باز کنید و مسیر فایل‌هایی که قرار است کلاس‌های Tailwind در آن‌ها استفاده شود را مشخص
+        کنید:
+      </p>
+
+      <!-- Code box -->
+      <pre dir="ltr" class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>// tailwind.config.js
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,html}"
+    ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+</code>
+    </section>
+    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+
+      <p class="mt-3 text-gray-700 leading-relaxed">
+
+
+       3. اضافه کردن Directives
+
+محتوای فایل CSS اصلی را به شکل زیر تنظیم کنید:        
+      </p>
+
+      <!-- Code box -->
+      <pre dir="ltr" class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>// input.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+</code></pre>
+      <p class="mt-3 text-gray-700 leading-relaxed">
+        سپس  tailwind  را ایجاد کنید:
+      </p>
+      <pre dir="ltr" class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>//package.json
+        {
+        "devDependencies": {
+          "tailwindcss": "^3.4.18"
+          
+        },
+//برای ران کردن پروژه
+        "scripts": {
+          "tailwind": "tailwindcss -i ./css/input.css -o ./css/main.css --watch"
+        }
+      }
+      </code></pre>
+      <p class="mt-3 text-gray-700 leading-relaxed">
+       حال میتوانین با این کامند  پروژه را ران کنید
+      </p>
+      <pre dir="ltr" class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>//cmd
+nmp run tailwind
+      </code></pre>
+    </section>
+
+
+    <!-- Explanation -->
+    <p class="mt-3 text-gray-700 leading-relaxed">
+     
+    </p>
+    </section>
+
+  </div>
+</body>
+
+</html>
