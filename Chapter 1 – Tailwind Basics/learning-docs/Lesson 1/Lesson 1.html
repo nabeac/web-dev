@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="../../tailwind/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
 
-  <title>داکیومنت قابل استفاده مجدد</title>
+  <title>جلسه اول</title>
 </head>
 
 <body class="bg-gray-100 p-6  text-gray-800 leading-relaxed">
@@ -37,7 +37,7 @@
       </p>
     </section>
 
-    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+    <section class="bg-white p-5  rounded-2xl shadow-md border-r-4 border-orange-500">
       <h2 class="text-xl font-bold text-orange-600 mb-3">Install Tailwind CSS (v3.4) </h2>
 
 
@@ -115,7 +115,7 @@ module.exports = {
 
 </code></pre>
       <p class="mt-3 text-gray-700 leading-relaxed">
-        سپس  tailwind  را ایجاد کنید:
+        سپس tailwind را ایجاد کنید:
       </p>
       <pre dir="ltr" class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>//package.json
         {
@@ -130,7 +130,7 @@ module.exports = {
       }
       </code></pre>
       <p class="mt-3 text-gray-700 leading-relaxed">
-       حال میتوانین با این کامند  پروژه را ران کنید
+        حال میتوانین با این کامند پروژه را ران کنید
       </p>
       <pre dir="ltr" class="language-js bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto text-sm"><code>//cmd
 nmp run tailwind
@@ -138,9 +138,171 @@ nmp run tailwind
     </section>
 
 
+
+    <!-- Header Component -->
+    <header class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+      <h1 class="text-3xl font-bold text-orange-600">فاصله ها در tailwindcss</h1>
+    </header>
+
+    <section class="bg-white p-5 rounded-2xl shadow-md border-r-4 border-orange-500">
+
+      <p class="mt-3 text-gray-700 leading-relaxed">
+        انواع فاصله ها:
+      <ul class="list-disc pr-6 space-y-1 text-gray-700">
+        <li>margin (حاشیه بیرونی)</li>
+        <li>padding (فضای درونی)</li>
+        <li>gap (فاصله بین المان‌های شبکه‌ای مثل Flexbox و Grid)</li>
+      </ul>
+
+      margin (حاشیه بیرونی):
+      </p>
+      <table class="mt-5 min-w-full border border-orange-300 rounded-lg text-right">
+
+        <thead class="bg-orange-100 text-orange-700 font-semibold">
+          <tr>
+            <th class="border border-orange-300 px-4 py-2">کلاس</th>
+            <th class="border border-orange-300 px-4 py-2">کاربرد</th>
+            <th class="border border-orange-300 px-4 py-2">مثال</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">m-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه کلی در تمام جهات</td>
+            <td class="border border-orange-300 px-4 py-2"><code>m-4</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">mx-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه افقی (چپ و راست)</td>
+            <td class="border border-orange-300 px-4 py-2"><code>mx-2</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">my-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه عمودی (بالا و پایین)</td>
+            <td class="border border-orange-300 px-4 py-2"><code>my-3</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">mt-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه بالا</td>
+            <td class="border border-orange-300 px-4 py-2"><code>mt-6</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">mr-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه راست</td>
+            <td class="border border-orange-300 px-4 py-2"><code>mr-1</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">mb-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه پایین</td>
+            <td class="border border-orange-300 px-4 py-2"><code>mb-5</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">ml-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">حاشیه چپ</td>
+            <td class="border border-orange-300 px-4 py-2"><code>ml-0</code></td>
+          </tr>
+        </tbody>
+      </table>
+      padding (فضای درونی):
+      <table class="mt-5 min-w-full border border-orange-300 rounded-lg text-right mt-6">
+        <thead class="bg-orange-100 text-orange-700 font-semibold">
+          <tr>
+            <th class="border border-orange-300 px-4 py-2">کلاس</th>
+            <th class="border border-orange-300 px-4 py-2">کاربرد</th>
+            <th class="border border-orange-300 px-4 py-2">مثال</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">p-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی در تمام جهات</td>
+            <td class="border border-orange-300 px-4 py-2"><code>p-4</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">px-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی افقی (چپ و راست)</td>
+            <td class="border border-orange-300 px-4 py-2"><code>px-2</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">py-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی عمودی (بالا و پایین)</td>
+            <td class="border border-orange-300 px-4 py-2"><code>py-3</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">pt-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی بالا</td>
+            <td class="border border-orange-300 px-4 py-2"><code>pt-6</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">pr-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی راست</td>
+            <td class="border border-orange-300 px-4 py-2"><code>pr-1</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">pb-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی پایین</td>
+            <td class="border border-orange-300 px-4 py-2"><code>pb-5</code></td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">pl-{size}</td>
+            <td class="border border-orange-300 px-4 py-2">فضای داخلی چپ</td>
+            <td class="border border-orange-300 px-4 py-2"><code>pl-0</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      راهنمای سایز ها :
+      <table class="min-w-full border border-orange-300 rounded-lg text-right mt-6">
+        <thead class="bg-orange-100 text-orange-700 font-semibold">
+          <tr>
+            <th class="border border-orange-300 px-4 py-2">مقدار</th>
+            <th class="border border-orange-300 px-4 py-2">معادل تقریبی (rem)</th>
+            <th class="border border-orange-300 px-4 py-2">توضیح</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">0</td>
+            <td class="border border-orange-300 px-4 py-2">0</td>
+            <td class="border border-orange-300 px-4 py-2">بدون فاصله</td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">1</td>
+            <td class="border border-orange-300 px-4 py-2">0.25rem (4px)</td>
+            <td class="border border-orange-300 px-4 py-2">فاصله کوچک</td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">2</td>
+            <td class="border border-orange-300 px-4 py-2">0.5rem (8px)</td>
+            <td class="border border-orange-300 px-4 py-2">فاصله متوسط</td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">4</td>
+            <td class="border border-orange-300 px-4 py-2">1rem (16px)</td>
+            <td class="border border-orange-300 px-4 py-2">فاصله معمول</td>
+          </tr>
+          <tr class="hover:bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">8</td>
+            <td class="border border-orange-300 px-4 py-2">2rem (32px)</td>
+            <td class="border border-orange-300 px-4 py-2">فاصله بزرگ</td>
+          </tr>
+          <tr class="hover:bg-orange-50 bg-orange-50">
+            <td class="border border-orange-300 px-4 py-2">px</td>
+            <td class="border border-orange-300 px-4 py-2">1px</td>
+            <td class="border border-orange-300 px-4 py-2">۱ پیکسل</td>
+          </tr>
+        </tbody>
+      </table>
+
+      اما gap به همراه flex & Grid
+      میاید
+      (جلسه 2)
+    </section>
+
+
     <!-- Explanation -->
     <p class="mt-3 text-gray-700 leading-relaxed">
-     
+
     </p>
     </section>
 
