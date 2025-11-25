@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "../learning-docs/**/*.html",
-    "./src/*.html"
+    "./src/**/*.html"
   ],
   theme: {
     extend: {},
