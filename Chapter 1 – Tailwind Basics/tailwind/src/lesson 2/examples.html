@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>مثال ها |examples</title>
+</head>
+
+<body class="flex flex-col gap-5 p-10">
+<p>مثال دکمه های کنار هم</p>
+<div class="flex gap-4 p-4">
+  <button class="px-4 py-2 bg-blue-600 text-white rounded">دکمه ۱</button>
+  <button class="px-4 py-2 bg-green-600 text-white rounded">دکمه ۲</button>
+  <button class="px-4 py-2 bg-gray-600 text-white rounded">دکمه ۳</button>
+</div>
+
+<p>مثال دکمه های وسط چین شده</p>
+<div class="flex justify-center gap-4 p-4">
+  <button class="px-4 py-2 bg-purple-600 text-white rounded">قبلی</button>
+  <button class="px-4 py-2 bg-purple-600 text-white rounded">بعدی</button>
+</div>
+
+<p>مثال سرچ بار ساده</p>
+<div class="flex items-center gap-2 p-4">
+  <input
+    type="text"
+    placeholder="جستجو..."
+    class="border px-3 py-2 rounded w-64"
+  />
+  <button class="px-4 py-2 bg-blue-600 text-white rounded">جستجو</button>
+</div>
+
+<p>مثال کارت های کنار هم</p>
+<div class="flex gap-4 p-4">
+  <div class="border p-4 rounded shadow w-40 text-center">کارت ۱</div>
+  <div class="border p-4 rounded shadow w-40 text-center">کارت ۲</div>
+  <div class="border p-4 rounded shadow w-40 text-center">کارت ۳</div>
+</div>
+
+<p>مثال فلکس با فاصله بین عناصر (space-between)</p>
+<div class="flex justify-between p-4">
+  <div class="bg-red-400 p-3 rounded">A</div>
+  <div class="bg-blue-400 p-3 rounded">B</div>
+  <div class="bg-green-400 p-3 rounded">C</div>
+</div>
+
+<p>فلکس ستونی (Column Flex)</p>
+<div class="flex flex-col gap-3 p-4">
+  <div class="bg-gray-200 p-3 rounded">آیتم ۱</div>
+  <div class="bg-gray-200 p-3 rounded">آیتم ۲</div>
+  <div class="bg-gray-200 p-3 rounded">آیتم ۳</div>
+</div>
+
+<p>مثال فرم لاگین با فلکس و وسط‌چین کامل</p>
+<div class="flex items-center justify-center h-screen">
+  <div class="border p-6 rounded shadow w-80 flex flex-col gap-4">
+    <input class="border p-2 rounded" placeholder="ایمیل" />
+    <input class="border p-2 rounded" placeholder="رمز" />
+    <button class="bg-blue-600 text-white p-2 rounded">ورود</button>
+  </div>
+</div>
+
+<p>مثال هدر سه‌تکه (لوگو - منو - پروفایل)</p>
+<header class="flex justify-between items-center p-4 border-b">
+  <div class="text-xl font-bold">لوگو</div>
+
+  <nav class="flex gap-6">
+    <a href="#" class="hover:text-blue-600">صفحه اصلی</a>
+    <a href="#" class="hover:text-blue-600">درباره</a>
+    <a href="#" class="hover:text-blue-600">تماس</a>
+  </nav>
+
+  <button class="px-3 py-2 bg-gray-800 text-white rounded">پروفایل</button>
+</header>
+
+<p>مثال گالری عکس با Wrap (فلکس با خط جدید)</p>
+<div class="flex flex-wrap gap-4 p-4">
+  <div class="w-32 h-32 bg-gray-300 rounded"></div>
+  <div class="w-32 h-32 bg-gray-300 rounded"></div>
+  <div class="w-32 h-32 bg-gray-300 rounded"></div>
+  <div class="w-32 h-32 bg-gray-300 rounded"></div>
+  <div class="w-32 h-32 bg-gray-300 rounded"></div>
+</div>
+<p>مثال سایدبار + محتوای اصلی (Layout)</p>
+<div class="flex h-screen">
+  <aside class="w-48 bg-gray-800 text-white p-4">
+    سایدبار
+  </aside>
+
+  <main class="flex-1 p-6">
+    محتوای اصلی
+  </main>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+    
