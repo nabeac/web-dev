@@ -1,72 +1,31 @@
-from flask import Flask, render_template, flash, redirect, url_for, request
+from flask  import Flask, render_template, request, flash
 
 app = Flask(__name__)
+app.secret_key = "secret-key-"
 
-app.secret_key = "a_very_secret_key"
-
-
-post = [
-    {
-        "id": 1, 
-        "title": "شروع کار با پایتون", 
-        "body": "پایتون یکی از ساده‌ترین و محبوب‌ترین زبان‌های برنامه‌نویسی است..."
-    },
-    {
-        "id": 2, 
-        "title": "چرا وبلاگ می‌سازیم؟", 
-        "body": "ساخت وبلاگ بهترین پروژه برای یادگیری مفاهیم اصلی توسعه وب است..."
-    },
-    {
-        "id": 3, 
-        "title": "شروع کار با [پایتون]", 
-        "body": "پایتون یکی از ساده‌تر ین و محبوب‌ترین زبان‌های برنامه‌نویسی است..."
-    },
-    {
-        "id": 4, 
-        "title": "چرا s می‌سازیم؟", 
-        "body": "سا خت وبلاگ بهترین پروژه برای یادگیری مفاهیم اصلی توسعه وب است..."
-    }
-]
-
-# ____ ---- _____
-
+#---------------------------------------------------------
 @app.route('/')
 def home():
-    return render_template("index.html")
-
-@app.route('/blog')
-def list_blog():
-    return render_template("list_blog.html", posts=post)
-
-@app.route('/blog/<int:id>')
-def detail_blog(id):
-    s_post = next((p for p in post if p["id"] == id), None)
-    return render_template("detail_blog.html", posts=s_post)
-
-
-@app.route('/contact', methods=['POST','GET'])
-def contact():
-    if request.method == "POST":
-        name = request.form.get('fulname')
-        if not name:
-            flash('اسم را وارد کنید ❌', "danger")
-        else:
-            flash(f"{name} جان با فورم با موفقیت ثبت شد ✅", "success")
-
-    return render_template("contact.html")
+    return render_template("blog/home.html")
 
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    return render_template("blog/about.html")
 
 
-@app.route('/submit')
-def submit():
-    flash("عملیات با موفقیت انجام شد ✅", "danger")
-    return redirect(url_for('home'))
-# ____ ----- ______
+@app.route('/contact', methods=['GET','POST'])
+def contact():
+    name = 'sgbaoingbpaerjbmperagpowg'
+    if request.method == 'POST':
+        name = request.form.get('fulname')
+        if name == '':
+            flash('اسم را وارد کن عزیزم &#10060', 'danger')
+        else:
+            flash('با موفقیت ثبت شد  <p>I will display &#9989;</p>', 'success')
+    return render_template("blog/contact.html", name=name)
 
+
+#----------------------------------------------------------
 if __name__ == "__main__":
     app.run(debug=True)
-
