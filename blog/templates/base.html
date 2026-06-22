@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>nab blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li><strong>{{ category }}:</strong> {{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    
+<nav class="bg-white shadow p-4 flex justify-between">
+  <h1 class="font-bold">MySite</h1>
+  <div class="space-x-3">
+    <a class="text-gray-600" href="{{url_for('home')}}">Home</a>
+    <a class="text-gray-600" href="{{url_for('about')}}">About</a>
+    <a class="text-gray-600" href="{{url_for('contact')}}">Contact</a>
+  </div>
+</nav>
+
+{% block context %}
+
+
+{% endblock %}
+
+</body>
+</html>
